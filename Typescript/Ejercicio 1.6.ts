@@ -1,9 +1,10 @@
-const elementoInventario = ['tuerca', 11];
+const elementoInventario:Array<string | number> = ['tuerca', 11];
 
 // despues lo desestructuramos
 const [nombre, cantidad] = elementoInventario;
 
-const mensaje = agregarInventario(nombre, cantidad);
+const mensaje:string = agregarInventario(nombre, cantidad); // Al borrar y escribir devuelta la coma
+ // se arregla el error, no logre encontrar porque sucede
 
 console.log('[Ejercicio 1.6]', mensaje);
 
