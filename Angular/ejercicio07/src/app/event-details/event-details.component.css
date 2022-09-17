@@ -1,0 +1,20 @@
+.container{
+    display: inline-block;;
+    padding: 10px;
+    border: 2px lightblue;
+    border-style: hidden double dashed;
+    border-radius: 15px;
+}
+
+.tags{
+    display: inline-block;
+    text-decoration: underline;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.data{
+    display: inline-block;
+    color: gray;
+    font-style: italic;
+}

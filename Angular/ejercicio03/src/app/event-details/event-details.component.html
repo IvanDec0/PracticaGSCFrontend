@@ -14,6 +14,6 @@
         Hora: {{datos.time}}
     </div>
     <div>
-        Direccion: {{datos.location.address}} en {{datos.location.city}}, {{datos.location.country}}
+        <app-event-address [location]="datos.location"></app-event-address>
     </div>
 </div>

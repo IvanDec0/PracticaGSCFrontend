@@ -1,15 +1,15 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { EventDetailsComponent } from './event-details/event-details.component';
-import { EventAddressComponent } from './event-address/event-address.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventDetailsComponent,
-    EventAddressComponent
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule

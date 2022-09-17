@@ -1,0 +1,5 @@
+<div *ngIf="currentCounter">                                                
+   <h1>Felicitaciones!</h1>                                                 
+   <h3>Asignaste al contador del padre: {{currentCounter}}</h3>              
+ </div>                                                                      
+ <app-child (buttonClik)="reciveClick(event)"></app-child>

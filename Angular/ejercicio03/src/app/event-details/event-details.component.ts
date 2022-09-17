@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-event-details',
@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-details.component.css']
 })
 export class EventDetailsComponent implements OnInit {
-  
 
+  
   datos={
   name: 'ngConf 2025',
   date: '3/1/2025',
@@ -17,7 +17,11 @@ export class EventDetailsComponent implements OnInit {
     city: 'Salt Lake City, UT',
     country: 'USA'
   }
-}
+  }
+
+
+  
+
 
 constructor() { }
 

@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="tags">
+    <div>
+      Evento:
+    </div>
+    <div>
+      Fecha:
+    </div>
+    <div>
+      Hora:
+    </div>
+    <div>
+      Direccion:
+    </div>
+  </div>
+  
+  <div class="data">
+    <div>
+      {{ event.name }} 
+    </div>
+    <div>
+      {{ event.date }}
+    </div>
+    <div>
+      {{ event.time }}
+    </div>
+    <div>
+      {{ event.location.address }}, {{ event.location.city }}, {{ event.location.country }}
+    </div>
+  </div>
+
+</div>
