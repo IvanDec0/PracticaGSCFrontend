@@ -12,11 +12,7 @@ export class DetailsGuard
 {
 	constructor(private eventService: EventService) {}
 
-	canDeactivate(
-		component: EventDetailsComponent,
-		currentRoute: ActivatedRouteSnapshot,
-		currentState: RouterStateSnapshot,
-		nextState?: RouterStateSnapshot | undefined
+	canDeactivate(component: EventDetailsComponent, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot | undefined
 	):
 		| boolean
 		| UrlTree
@@ -25,9 +21,7 @@ export class DetailsGuard
 		return component.reviewed;
 	}
 
-	canActivate(
-		route: ActivatedRouteSnapshot,
-		state: RouterStateSnapshot
+	canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot
 	):
 		| Observable<boolean | UrlTree>
 		| Promise<boolean | UrlTree>
@@ -37,6 +31,6 @@ export class DetailsGuard
 		if (!paramID) {
 			return false;
 		}
-		return !!this.eventService.getOneEvent(paramID);
+		return !this.eventService.getOneEvent(paramID);
 	}
 }
