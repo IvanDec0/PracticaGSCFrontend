@@ -1,0 +1,12 @@
+<div *ngIf="event">
+    <h1>{{event.name}}</h1>
+    <br/>
+    <h3>Date: {{event.date}} </h3>      
+    <h3>Time: {{event.time}}</h3>
+    <h3>Location: {{event.location.address}}, {{event.location.city}}, {{event.location.country}}</h3>
+</div>
+<div>
+    <label>Reviewed: </label>
+    <input type="checkbox" [value]="reviewed" (change)="chkChange()"/>
+</div>
+<button (click)="returnToEvents()">Volver al Listado</button>
