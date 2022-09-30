@@ -1,0 +1,39 @@
+<div>
+  <form [formGroup]="formEvent" (ngSubmit)="saveEvent()">
+    <div class="form-group" >
+      <label for="event-name">Nombre del evento:</label>
+      <input id="event-name" type="text" formControlName="name" required/>
+      <div class="alert" *ngIf="formEvent.get('name')?.invalid && formEvent.get('name')?.touched && formEvent.get('name')?.dirty">Este campo es requerido!</div>
+    </div>
+    <div class="form-group">
+      <label for="date">Fecha: </label>
+      <input id="date" type="text" formControlName="date" required/>
+      <div class="alert" *ngIf="formEvent.get('date')?.invalid && formEvent.get('date')?.touched && formEvent.get('date')?.dirty">Este campo es requerido!</div>
+    </div>
+    <div class="form-group">
+      <label for="time">Hora: </label>
+      <input id="time" type="text" formControlName="time" required/>
+      <div class="alert" *ngIf="formEvent.get('time')?.invalid && formEvent.get('time')?.touched && formEvent.get('time')?.dirty">Este campo es requerido!</div>
+    </div>
+    <div name="location" formGroupName="location">
+      <div class="form-group">
+        <label for="address">Dirección: </label>
+        <input id="address" type="text" formControlName="address" required/>
+        <div class="alert" *ngIf="formEvent.get('location')?.get('address')?.invalid && formEvent.get('location')?.get('address')?.touched && formEvent.get('location')?.get('address')?.dirty">Este campo es requerido!</div>
+      </div>
+      <div class="form-group">
+        <label for="city">Ciudad: </label>
+        <input id="city" type="text" formControlName="city" required/>
+        <div class="alert" *ngIf="formEvent.get('location')?.get('city')?.invalid && formEvent.get('location')?.get('city')?.touched && formEvent.get('location')?.get('city')?.dirty">Este campo es requerido!</div>
+      </div>
+      <div class="form-group">
+        <label for="country">Pais: </label>
+        <input id="country"  type="text" formControlName="country" required pattern="[A-Z][A-Z][a-z]*" />
+        <div class="alert" *ngIf="formEvent.get('location')?.get('country')?.invalid && formEvent.get('location')?.get('country')?.touched && formEvent.get('location')?.get('country')?.dirty">El pais debe comenzar con mayuscula!</div>
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="!formEvent.valid">Guardar</button>
+    <button type="button" class="btn btn-default" (click)="cancel()">Cancelar</button>
+  </form>
+</div>
