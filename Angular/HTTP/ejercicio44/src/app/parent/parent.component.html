@@ -1,0 +1,12 @@
+  
+    <h1>Utilizando parámetros de consulta</h1>
+    <form>
+    Ciudad: <input type="text" name="city" [(ngModel)]="city">
+    <br /><br />
+    <button class="btn btn-primary" type="submit" (click)="makeRequest()">Obtener el pronóstico</button>
+    </form>
+    <br/>
+    <p *ngIf="forecast" >
+    Pronostico para mañana en {{forecast?.name}}, {{forecast?.sys.country}} es de: {{ forecast?.main.temp }}, con una maxima de {{ forecast?.main.temp_max }} y una minima de {{forecast?.main.temp_min}},
+    con una humedad del {{forecast?.main.humidity}}%
+    </p>
